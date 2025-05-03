@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Deconvolve Multiple MLS signal</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <p align="justify">This module  retrieves the system's impulse response(s) from a recording made after  excitation with the signal generated through the <a href="Gen Multiple MLS Signal.htm">Generate Multiple MLS</a> module. <br />
+This processing is suitable  only for measurement made with synchronous playback and recording, typically  made under <a href="http://www.syntrillium.com/cep/">CoolEditPro</a> in Multitrack mode, playing the excitation  signal on track #1 and simultaneously recording the binaural response on track  #2, as shown here:<br />
+Obviously for proper  deconvolution the proper parameters must be set, matching those of the  excitation signal. Let we assume that a stereo generation was made on a pair of  loudspeakers, and that a binaural recording of the system's response was made  through a dummy head placed in front of the pair of loudspeakers. This means  that two separate, consecutive measurement were done, each made of 16  repetitions of the MLS signal having order 15B. Thus the deconvolution  parameters must be the following:</p>
+      <table width="36%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="360" height="345" src="immagini/Deconvolve Multiple MLS signal_clip_image001.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+      The first sequence of each  group of 16 is discarded, because the system is not steady yet. Furthermore,  only the first 4096 point of each measured Impulse Response are retained,  starting from the beginning without skipping any samples.</p>
+      <table width="37%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="370" height="395" src="immagini/Deconvolve Multiple MLS signal_clip_image002.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><br />
+      </p>
+      <p align="justify"><br />
+        After the deconvolution, a  set of 4 impulse response is obtained. First are the binaural IR of the Left  loudspeaker, followed by the binaural IR of the Right loudspeaker:</p>
+      <table width="73%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="740" height="494" src="immagini/Deconvolve Multiple MLS signal_clip_image003.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p><br />
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    The impulse response files, in this format called  2x2, are already suitable for the calculation of cross-talk cancelling filters  through the <a href="Kirkeby's Inverse Filter v4_0.htm">Inverse Kirkeby</a> module.</div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

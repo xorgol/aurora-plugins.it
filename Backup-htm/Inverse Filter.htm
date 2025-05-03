@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Inverse Filter (Mourjopoulos theory)</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <p align="justify">The creation of a causal,  stable inverse filter for a given mixed-phase impulse response is generally an  impossible task, and only approximate solution are available for this problem.  This argument was deeply investigated by Mourjopoulos [12], particularly with  the goal of obtaining a digital equalisation of the room's response. Among the  various techniques explored by him and others, the straightforward  least-squares technique was chosen, as clearly explained in the Mourjopoulos  paper. A least-square problem is set up, requiring that the unknown inverse  filter, g(t), when convoluted with the original impulse response h(t), produces  as result a delayed Dirac's delta function. After proper formulation, a  standard linear equation system is formed, in which a square matrix [R] is  multiplied by the unknown vector {g}, producing the known terms vector {k}. <br />
+[R]&nbsp;&middot;&nbsp;{g}&nbsp;=&nbsp;{k} <br />
+It turns out that the  latter is simply a delayed, time reversed copy of the original impulse response  h(t), while the [R] matrix is a Toepltiz matrix, in which the first row is  simply the autocorrelation function of the original signal, and each of the  subsequent rows is obtained by circular permutation (1 sample to the right) of  the upper row. Fortunately, the solution of a Toeplitz system is possible with  standard algorithms, included in any library of scientific functions. This way  only the first row of the matrix has to been generated and stored, and the  computation is thus possible also for very long IRs on standard computers. The  successful creation of an inverse filter is anyway not always easy: if the  frequency response of the original impulse response has very deep valleys,  these tunr out in strong peak of the inverse filters, which tends to become  quite long. Furthermore, if the high frequency part of the spectrum of the  original signal has low energy (this is common when an anti-aliasing filter is  used), the inverse filter has maximum amplitude at these inaudible frequencies,  and a very low gain at the lower frequencies, so that the filtered signal can  fall below the numerical noise floor. For these reasons a certain  pre-processing of the original impulse response is usually needed before  attempting its inversion, but in this field only the experience and skillness  of the user can be useful. Anyway, the inverse filter can always be quickly  checked, applying it to the original impulse response or to other raw signals,  by means of the convolution module. Often our ears are the better instrument  for checking if the inverse filter is acceptable, or if it produces intolerable  artifacts. </p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+      <p>For example, the following  picture reports an impulse response of a room excited by a loudspeaker and  recorded by a microphone placed at a certain distance from it, so that a lot of  reverberation and wall reflections are evident. This causes also an evident  frequency response colouration, as shown in the same picture.</p>
+      <table width="57%" border="0" align="left">
+        <tr>
+          <td><img width="569" height="397" src="immagini/Inverse Filter_clip_image001.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="57%" border="0" align="left">
+        <tr>
+          <td><img width="569" height="398" src="immagini/Inverse Filter_clip_image002.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><br />
+        <br />
+        <br />
+      Invoking the Transform /  Inverse Filter module, a dialog box appears, asking for the length of the  inverse filter (in samples) and for the wanted delay of the signal (this is  necessary for ensuring that the inverse filter is causal, and is usually chosen  around half the length of the filter). Morjopoulos suggests a filter length  approximately equal to the reverberation time of the room, although in some  case shorter filters works reasonably well. </p>
+      <table width="41%" border="0" align="left">
+        <tr>
+          <td><img width="408" height="185" src="immagini/Inverse Filter_clip_image003.gif" /></td>
+        </tr>
+      </table>
+      <p><br />
+        </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="42%" border="0" align="left">
+        <tr>
+          <td><img width="422" height="152" src="immagini/Inverse Filter_clip_image004.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>        Then the solution of the  Toeplitz problem is started: the computation time increases with the square of  the filter length, because it is an iterative algorithm, which loops for a  number of times equal to the filter length, and the number of operations inside  each cycle is also proportional to the number of unknowns. <br />
+        <br />
+        After a few seconds,  anyway, a dialog box is displayed, informing the user that the inverse filter  has been successfully stored in the Windows clipboard. <br />
+      From there it can be  recovered, opening a new instance of CoolEdit and pasting from the Windows  clipboard. The following figure reports the inverse filter of the room  response.</p>
+      <table width="55%" border="0" align="left">
+        <tr>
+          <td><img width="549" height="542" src="immagini/Inverse Filter_clip_image005.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="55%" border="0" align="left">
+        <tr>
+          <td><img width="549" height="541" src="immagini/Inverse Filter_clip_image006.gif" /></td>
+        </tr>
+      </table>
+      <p><br />
+        </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><br />
+        <br />
+        The verification of the  proper working of the filter can be done by convolving the original impulse  response with it. This is shown in the following pictures: an almost perfect  Dirac's delta function has been obtained in the time domain, and in the  frequency domain the response is flat. </p>
+      <table width="55%" border="0" align="left">
+        <tr>
+          <td><img width="549" height="541" src="immagini/Inverse Filter_clip_image007.gif" /></td>
+        </tr>
+      </table>
+      <p><br />
+        </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <table width="55%" border="0" align="left">
+        <tr>
+          <td><img width="549" height="541" src="immagini/Inverse Filter_clip_image008.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+        This way the effect of the transducers can be removed from a measured  impulse response, or in general any recording done through a linear channel can  be cleaned from its effects: in principle, a recording affected by too much  reverberation can be de-reverberated, although this effect is quite difficult  to obtain, because even a small difference in the position of the source and  the receiver makes the inverse filter unmatched with the signal. Morjopoulos  already addressed this problem [12], and an enhanced dereverberation module is  being developed now, following his principles. </p>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

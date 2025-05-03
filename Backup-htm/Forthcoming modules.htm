@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {
+	color: #63AC53;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.Stile3 {color: #CCCCCC}
+.Stile4 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale men� -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale men� -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Forthcoming Modules</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <h2 align="justify" class="Stile4">Microphone Array B-format converter</h2>
+      <p align="justify">This extension under development will work WITHOUT the need of an expensive   B-format microphone, as the well known <a href="http://www.soundfield.co.uk/">Soundfield</a> microphone or the new <a href="http://www.agmworld.com/agm-mr2.htm">AGM-MR2</a> microphone. One or   several omnidirectional microphones is all that is required, and the B-format   response will be computed from a set of independent Impulse Response   measurements taken in a point and in several closely spaced positions. A   temptative Fortran version (Character mode) of this forthcoming plugin can be   freely downloaded <a href="http://www.ramsete.com/Public/B-format/Software">here</a>. It is called   Crux7toBform.exe, and requires a 7-channels input. The final version will be a   VST multichannel plugin, and will work with any number of microphones (4 to 24),   producing 1st, 2nd or 3rd order B-format components (4, 9 or 16 channels). </p>
+      <h2 align="justify" class="Stile4">Software Ambisonics Decoder</h2>
+      <p align="justify">This module will create the decoding impulse response matrix for ANY number   of loudspeakers in ANY configuration. A typical Ambisonics listening setup makes   use of 8 loudspeakers placed roughly at the vertices of a cube. A 4-channels,   B-format signal has to be decoded in 8 feeds for the speakers. through a   properly designed decoder. Although some analog and/or digital decoder is   available on the market, their working principle is factory-preset to some   typical speaker layouts, with a limited degree of freedom for adjustments on the   field. The proposed system is completely self-calibrating: a B-format impulse   response measurement is conducted for each loudspeaker of the reproduction rig.   Then this set of B-Format IRs is processed through the software decoder, which   produces the required set of decoding IRs (typically they are 32 for an   8-speakers system): these decoding IRs are usually very short (less than 1024   taps), making it possible to convolve them in realtime. Convolving the B-format   original signal with this matrix of IRs, and mixing together the 4 streams for   each speaker, the multichannel decoded wave file is produced. Then You have to   play it through a multichannel sound card... . NOTE: the above process is   capable not only of properly decoding an Ambisonics B-format signal, but it also   perfectly equalizes and time-realignes the loudspeakers and is even capable of   correcting for the room response (also if this is subject to the   &quot;dereverberation&quot; constraints alread explained about the <a href="Cross Functions v4_0.htm">Cross Talk Cancellation</a> module). This module will be released as a VST plugin - unfortunately, the   current version of Audition only supports 2-channels VST plugins, so a true   multichannel VST host (such as <a href="http://www.audiomulch.com/">AudioMulch</a> or <a href="http://www.plogue.com/">Plogue Bidule</a>) will be required. In the   meanwhile, a small Fortran program which implements the same functionality, but   computing just 1 or 2 speaker feeds at once, (VirtualMike.exe) is available for   free <a href="http://www.ramsete.com/Public/B-format/Software">download</a>. </p>
+      <h2 align="justify" class="Stile4">Wave-Ex multichannel file format filters</h2>
+      <p align="justify">We have plan to develop a new import/export module, capable of reading and   writing multi-channel files in the new <a href="http://www.microsoft.com/whdc/device/audio/multichaud.mspx">Microsoft   Wave-Ex format</a> and in the Lossless-Compressed <a href="http://flac.sourceforge.net/">FLAC</a> format. This will make it possible,   for example, to employ directly (without any further file conversion) already   existing freeware Ambisonics software decoders such as those produced by <a href="http://www.muse.demon.co.uk/mn_index.html">Richard Furse</a> and by <a href="http://www.bath.ac.uk/~masrwd/">Richard Dobson</a>, or to feed VST   decoding plugins such as those developed by <a href="http://www.gerzonic.net/">Gerzonic</a> or <a href="http://www.dmalham.freeserve.co.uk/BF_package.html">Dave Malham</a>. In   the meanwhile, a simple Character-mode converter (Pack2x2to4.exe) which packs   two stereo files in a single 4-channels file is freely downloadable from <a href="http://www.ramsete.com/Public/B-format/Software">here</a>. The final   version will be available both as a FLT module for Audition and as a pair of   multichannel VST plugins. </p>
+      <h2 align="justify" class="Stile4">Advanced FFT frequency analysis</h2>
+      <p align="justify">This module will replace the Audition's original Analyze/Frequency Analysis   module, introducing more professional features, such as Magnitude &amp; Phase   display, separate left and right plots, calibration of the Y axis in dB-SPL or   any other user-defined units, possibility to export the results onto the   clipboard, choice of different analysis options (standard FFT, transfer   function, power spectrum), capability to process only the selected waveform   piece. A <a href="http://www.ramsete.com/Aurora/analys.htm">Beta version</a> of   this module is included in the Aurora 3.3 package - some of this functionality   is also available in the <a href="Cross Functions v4_0.htm">Cross Function</a> module of   Aurora 4.0. </p>
+      <h2 align="justify" class="Stile4">Advanced IIR frequency and temporal analysis</h2>
+      <p align="justify">For the evaluation of tonal and impulsive components in environmental noise   measurements, following the <a href="http://www.spectra.it/download/files/legislazione/D16MAR98.pdf">Italian   regulations</a>. This module will compute the 1/3 octave spectrum of the minima   of the SPL-FAST values, and the temporal histories of the A-weighted SPL with   the three time constants Slow, Fast and Impulse. The module will check these   results against the Italian limits, and suggest the resulting penalties which   have to be added to the measured Leq. NOTE: some of these functionalities are   now included in the <a href="STI.htm">STI</a> and <a href="ITU P56 Time Profile Analysis.htm">ITUP56</a> modules!!! </p>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

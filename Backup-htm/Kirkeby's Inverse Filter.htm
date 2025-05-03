@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Kirkeby's Inverse Filter</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <p align="justify">This module computes the  Speech Transmission Index (STI), according to the standard IEC 60268-16 (2003).  The measurement of STI requires substantial expertise, and special equipment,  such as an artificial mouth (a special loudspeaker system emulating the  directivity and spectral emission of the human voice).<br />
+There are basically two  ways to measure STI:</p>
+      <div align="justify">
+        <ul type="disc">
+          <li>measurement of a &quot;noisy&quot; impulse       response employing MLS and no averaging </li>
+          <li>measurement of a &quot;noiseless&quot;       impulse response, emplying MLS or, better, Sine Sweep, and separate       measurement of the octave spectra of the Signal and of the Noise </li>
+        </ul>
+      </div>
+      <p align="justify">STI is dominated by the  Signal-To-Noise ratio, and any factor altering this delicate balance will  consequently result in wrong values of the STI parameter.<br />
+        Let us assume to use the  second technique (&quot;noiseless&quot; IR and seaparate estimation of the  spectra of Signal and Noise), as this provides much better repeatibility and  requires less effort.<br />
+        We assume that the reader  has already mastered the usage of Aurora for measuring impulse responses,  either with the MLS or the Sine Sweep approaches.<br />
+        As the IR measurement is  noiseless, we can avoid the troubles caused by setting the mouth simulator for  radiating the &quot;official&quot; SPL value (62 dBA at 1m from the lips) and  the &quot;official&quot; male or female spectra. instead, we can employ the  mouth simulator at maximum available power, and with flat equalization (or even  no equalization at all). In fact, the goal of IR measurement is just to  estimate reverberation and echoes, and not the Signal-to-Noise ratio, which  will be measured separately.<br />
+        So we play the test signal  through the mouth simulator, we record the room response through the monoaural  or binaural microphone, and we deconvolve the room impulse response. Let's  assume that this way we obtained a binaural IR, as shown here:</p>
+      <table width="71%" border="0" align="left">
+        <tr>
+          <td><img width="686" height="606" src="Kirkeby's Inverse Filter_clip_image001.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        Now we need to make a  recording of the background noise: but first we record 30s of calibration  signal (at 94 dB SPL), as shown here:</p>
+      <table width="71%" border="0" align="left">
+        <tr>
+          <td><img width="686" height="606" src="Kirkeby's Inverse Filter_clip_image002.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        And we calibrate the  amplitude scale of the STI module. We invoke it:</p>
+      <table width="54%" border="0" align="left">
+        <tr>
+          <td><img width="512" height="536" src="Kirkeby's Inverse Filter_clip_image003.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify"><br />
+        </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"> And we specify the Leq  value for each of the two channels - then, pressing the button labelled  &quot;Compute Octave Band Spectrum&quot;, the following result appears:</p>
+      <table width="65%" border="0" align="left">
+        <tr>
+          <td><img width="626" height="410" src="Kirkeby's Inverse Filter_clip_image004.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify"><br />
+        </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        We can press OK. Now the  amplitude scale of the STI module is correctly calibrated, and the next time we  will not need anymore to specify the Leq value.<br />
+        We perform now the  recording of the background noise, and the recording of the signal.<br />
+        The first one is done  without any signal emitted by the artificial mouth, the second is done emitting  a filtered pink noise. The filtering is generally necessary for ensuring that  the free-field signal, measured at im in front of the lips of the artificial  mouth, corresponds exactly with the prescribed spectrum for the  &quot;male&quot; talker specified inside the IEC standard. The total gain has  to be adjusted so that the signal is exactly 62 dB(A) at 1m, when measured in  free field.<br />
+        After these two recordings  of background noise and of signal are done, we have to invoke again the STI  module and perform an octave band analysis of them.<br />
+        The first time we analyze  the background noise, and we obtain this spectrum:</p>
+      <table width="65%" border="0" align="left">
+        <tr>
+          <td><img width="626" height="410" src="Kirkeby's Inverse Filter_clip_image005.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify"><br />
+        </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        Now we store it as Noise,  pressing the corresponding button.<br />
+        We analyse now the  recording of the Signal, and we obtain the following spectrum:</p>
+      <table width="65%" border="0" align="left">
+        <tr>
+          <td><img width="626" height="410" src="Kirkeby's Inverse Filter_clip_image006.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        As this measurement was  performed in presence of the background noise, we store this as Sig+N. In this  way, the module will calculate properly the Signal, subracting the Noise which  was already estimated from the previous recording.<br />
+        And now, finally, we can  process the measured impulse respone, for computing the STI. We open it with  Audition, and we invoke the STI module:</p>
+      <table width="54%" border="0" align="left">
+        <tr>
+          <td><img width="512" height="536" src="Kirkeby's Inverse Filter_clip_image007.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify"><br />
+        </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p><br />
+        We notice that now both the  Full Scale values and the spctra of Signal and Noise are properly set to the  coirrect values.<br />
+        We press now the button  &quot;Compute STI&quot;, and the following window appears:</p>
+      <table width="73%" border="0" align="left">
+        <tr>
+          <td><img width="700" height="464" src="Kirkeby's Inverse Filter_clip_image008.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        The graphical display of 4  of the 7 octave-band MTF values can be disabled, revealing the complete table  of MTF values:</p>
+      <table width="73%" border="0" align="left">
+        <tr>
+          <td><img width="700" height="464" src="Kirkeby's Inverse Filter_clip_image009.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify"><br />
+        </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        We can see how much the S/N  Correction or the Masking Correction are affecting the STI values by  de-selecting the correspondent options: usually the S/N is very important,  whilst the masking has very little effect on the results.</p>
+      <p align="justify">It must be noted that this module also computes the STI Female, even if  the measurement has been performed woith the STI Male equalization. </p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <div>
+        <p>&nbsp;</p>
+        <p><br />
+        </p>
+      </div>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

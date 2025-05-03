@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2"> Generate MLS signal - Generate IRS signal</h2>
+  </div>
+  <div id="testorosso">
+    <div class="feature">
+      <p align="justify">These two modules perform  very similar tasks: they create the excitation signals, which are required for  exciting the system when doing impulse response measurements with the following  scheme:</p>
+      <table width="57%" border="0" align="left">
+        <tr>
+          <td><img width="571" height="265" src="immagini/Gen MLS_IRS Signal_clip_image001.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;        </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify">MLS stands for Maximum  Lenght Sequence, IRS stands for Inverse Repeated Sequence. Both these  excitation signals are defined as a pseudo-random sequence of binary digits (0  and 1), built with a complex number-theory technique.<br />
+        The important properties of  these sequences are the following:</p>
+      <div align="justify">
+        <ul type="disc">
+          <li>Periodic: the signal can be repeated       continuously, through the &quot;Loop Mode&quot; of playback in CoolEdit.       Averaging the system's response over many repeated sequences, the       Signal-To-Noise ratio can be largely improved </li>
+          <li>Binary: as the signal switches between       only two extreme values, the crest factor is 0 dB, and this gives maximum       power within a constrained amplitude. </li>
+          <li>Flat spectrum: the frequency content of       these signal is almost perfectly flat, resembling an ideal &quot;white       noise&quot;. </li>
+          <li>Autocorrelation is a Dirac's Delta       function, and this enables the deconvolution of the system's impulse       response by correlating the measured response with the original sequence. </li>
+          <li>The MLS sequence has the great advantage       of making it possible the correlation process with a very fast algorithm,       the Fast Hadamard Transform, which yields the result through a limited       number of sums and subtractions, directly in the time domain. The       disadvantage is that, if the system exhibits some kind of non-linear       distortion, this can cause the appearance of some spurious &quot;phantom       echoes&quot; at some well-defined tap position. </li>
+          <li>The IRS sequence is made of two MLS       sequences, the second being an inverted copy of the first one. This means       that a 2*N sequence is required for measuring an N-point impulse response,       doubling the measurement time. Furthermore, the fast Hadamard transform       cannot be used for deconvolving the result, and the usual processing in       the frequency domain (by use of very large FFTs and IFFTs) is required       during the correlation. Although with this sequence the measurement is       slower, it exhibit a larger immunity to distortion, and particularly to       odd-order distortion. </li>
+        </ul>
+      </div>
+      <p align="justify">Aurora makes it possible to  generate MLS and IRS sequences up to order 21: this means that the maximum  length of the measured IRs will be 2^21-1, that is 2,097,151 samples,  corresponding to more than 47 s at a sampling frequency of 44.1 kHz !!!<br />
+        For the most commonly used  orders (14, 15, 16 and 17), more than one sequence is available (labelled as  16A, 16B and 16C, for example). Each of them is produced according to a  different permutation of the numerical basis, and thus the results are  uncorrelated. In case of distortion, each of these sequences produces spurious  echoes at different positions, so that they can be easily identified and  removed.<br />
+      The following picture shows  an MLS sequence of order 5 (period of 31 samples):</p>
+      <table width="55%" border="0" align="left">
+        <tr>
+          <td><img width="547" height="233" src="immagini/Gen MLS_IRS Signal_clip_image002.gif" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

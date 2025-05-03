@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">News</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <p>23 June 2006 - <strong>Aurora  version 4.1</strong> is now stable and officially released, and can now be <a href="http://www.aurora-plugins.it/AURORA/download/">downloaded</a> as the standard release. Fully compatible with  Adobe Audition 2.0. Look at <a href="http://www.aurora-plugins.it/AURORA/download/Aurora41-Readme.txt">readme.txt</a> for details</p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+      <p>10 April 2005 - <strong>The new  version 4.0 of Aurora plug-ins is </strong><a href="http://www.aurora-plugins.it/AURORA/download/Old_Versions/Aurora4.zip">available</a><strong>! </strong>It is fully compatible with&nbsp; Adobe  Audition 1.5. Look at the <a href="http://www.aurora-plugins.it/AURORA/download/Old_Versions/Aurora4-Readme.txt">readme.txt</a> file for details</p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+      <p>12 April 2003 - <strong>Aurora  3.3 is </strong><a href="http://www.aurora-plugins.it/AURORA/download/Old_Versions/Aurora33.zip">downloadable</a><strong> now</strong>. It is fully compatible with&nbsp; CoolEditPro  2.1 (alias Adobe Audition 1.0). Look at the <a href="http://www.aurora-plugins.it/AURORA/download/Old_Versions/Aurora33-Readme.txt">readme.txt</a> file for details</p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+      <p>7 July 2002. Some  forthcoming <a href="http://www.aurora-plugins.com/Aurora_XP/Forthcoming%20modules.htmPublic">new modules</a> are in preview form (as Fortran  character-mode executables) and freely downloadable from <a href="http://www.ramsete.com/Public/B-format/Software">here</a>.</p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+      <p>31 August 2000 - <strong>We have  a new Internet publisher</strong>: <a href="http://www.kagi.com/">KAGI.COM</a> - They maintain the <a href="http://order.kagi.com/?1BG&amp;KagiAffiliate=MSDL">secure order form</a> for on-line registration of the Aurora  software. E-commerce happens on their California-based server. This means that  it is governed by US regulations.</p>
+      <div align="center">
+        <hr size="2" width="100%" align="center" />
+      </div>
+    Have a close look to some examples of&nbsp; <a href="http://www.ramsete.com/intrepidi/intrepidi.htm">Virtual Audio Reconstructions</a>&nbsp; made using Aurora...</div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

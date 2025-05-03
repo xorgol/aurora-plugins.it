@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale men� -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale men� -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Convolve with Clipboard  (v. 4.0)</h2>
+  </div>
+  <div id="advert">
+    <div class="feature">
+      <p align="justify">For more information about  the use of the convolver for Virtual Acoustics, look at these <a href="http://www.ramsete.com/aurora/saw/roomsim.html">Theory Notes</a> by Philip Edelbrock.<br />
+This module performs linear  convolution of the currently selected waveform with the waveform actually  present in the Windows Clipboard. This means that, before using this module,  You have to load in the Windows Clipboard (not in the CoolEdit Clipboard !!!)  the Impulse Response that You want to use as a filter.<br />
+For example, we can start  opening the <a href="http://www.ramsete.com/Public/wav/foli-p12.wav">Impulse Response file:</a></p>
+      <table width="58%" border="0" align="left">
+        <tr>
+          <td><a href="http://www.ramsete.com/Public/wav/foli-p12.wav"><img border="0" width="578" height="444" src="immagini/Convolve with Clipboard_Ver4_clip_image001.gif" /></a></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+As the sampling rate of  this Impulse Response is 48 kHz, we need to convert it to 22 kHz using the  proper internal function of CoolEdit. After copying the resampled IR to the  windows Clipboard, we can load an anechoic sample:</p>
+      <table width="58%" border="0" align="left">
+        <tr>
+          <td><a href="http://www.ramsete.com/Public/wav/09-22k.wav"><img border="0" width="578" height="444" src="immagini/Convolve with Clipboard_Ver4_clip_image002.gif" /></a></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+        This is a mono file: if we  want it to be convolved with the binaural stereo IR, producing a stereo result  (auralisation), we need first to convert the waveform to stereo, making use of  the standard CoolEdit &quot;Convert Sample Type&quot; function. We can mix the  sound data to the left channel only, obtaining this result:</p>
+      <table width="58%" border="0" align="left">
+        <tr>
+          <td><a href="http://www.ramsete.com/Public/wav/09-22k.wav"><img border="0" width="578" height="444" src="immagini/Convolve with Clipboard_Ver4_clip_image003.gif" /></a></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>At this point, pressing the  &quot;Convolve with Clipboard&quot; button, the Following dialog Box appears:</p>
+      <table width="4%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="25" height="25" src="immagini/Convolve with Clipboard_Ver4_clip_image005.gif" /></td>
+        </tr>
+      </table>
+      <p></p>
+      <p><br />
+        <br />
+      </p>
+      <table width="60%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="594" height="510" src="immagini/Convolve with Clipboard_Ver4_clip_image006.jpg" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+      <br />
+        In this case, as it is  shown, we want to convolve the Left channel of the current audio data with both  the channels of the IR.<br />
+        When OK is pressed, the  standard Progress Meter of CoolEdit appears, until the convolution process is  finished. At this point the final dialog box is displayed, reporting statistics  about the convolution process:</p>
+      <table width="37%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="360" height="412" src="immagini/Convolve with Clipboard_Ver4_clip_image007.jpg" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><br />
+        <br />
+        Pressing OK, the new  convoluted waveform is displayed: click on the image for listening the result.</p>
+      <table width="58%" border="0" align="left">
+        <tr>
+          <td><a href="http://www.ramsete.com/Public/wav/09-folsp.wav"><img border="0" width="576" height="448" src="immagini/Convolve with Clipboard_Ver4_clip_image008.gif" /></a></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p><br />
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><strong>Note:</strong> the new version 4.0 of the  &quot;convolve with clipboard&quot; module incroporates all the functionality  previously provided by <a href="OLD Real Time Convolver.htm">Real Time Convolver</a>, including real-time preview of the convoved  signal, cross-talk cancellation and graphical display of the impulse response.<br />
+      There are also new  features: </p>
+      <div align="justify">
+        <ul type="disc">
+          <li>&quot;TimeReverse Impulse Response&quot;       makes it easy to convolve a signal with the time reversal of itself       (performing consequently the autocorrelation) or with the time reversal of       another signal (performing consequently the cross-correaltion between the       two signals) </li>
+          <li>&quot;Preserve Lenght&quot; mode allows       for keeping unchanged the number of samples (of course, the late decay of       the last sound can be cut) </li>
+          <li>&quot;Preserve 16th bit&quot; maintains       the content of the LSB of a 16-bits waveform, which is employed on some       system sfor containing not-audio information, such as the RPM of an engine </li>
+          <li>It is possible to disable the autorange       options, forcing a fixed rescaling of a specifed amount (in dB). </li>
+        </ul>
+      </div>
+      <ul type="disc">
+      </ul>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- Intestazione -->
+<head>
+<title>AURORA Plug-ins</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<META NAME="KEYWORDS" CONTENT="acoustic, acoustics, acustica, plugins, adobe audition, cool edit, sti, kirkeby, impulse response, convolution, filters, mls, sweep, ITU-T P.56, active speech level, angelo farina, speech transmission index">
+<META NAME="DESCRIPTION" CONTENT="Adobe Audition plugins for calculate: STI, impulse response, acoustic filters, etc...">
+<meta name="title" content="AURORA acoustic plugins for Adobe Audition">
+<META NAME="LANGUAGE" CONTENT="it, en-us">
+<META NAME="DOCUMENTCOUNTRYCODE" CONTENT="us">
+<META NAME="SEGMENT" CONTENT="gen">
+<meta name="LAE" content="global">
+<meta name="category" content="acoustic">
+<meta name="robots" content="index,follow">
+<meta name="REVISIT-AFTER" content="1 days">
+<meta http-equiv="EXPIRES" content="0">
+<!-- Fine Intestazione -->
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+<link rel="stylesheet" href="emx_nav_right.css" type="text/css" />
+
+<style type="text/css">
+<!--
+.Stile1 {font-size: small}
+.Stile2 {color: #63AC53}
+.Stile3 {color: #CCCCCC}
+.Stile5 {color: #0000FF}
+-->
+</style>
+</head>
+
+<div id="masthead">
+  <h1 id="siteName">A U R O R A &nbsp;&nbsp;&nbsp;P l u g - i n s  </h1>
+  
+  <!-- Barra principale menù -->
+  
+  <div id="globalNav"> 
+    <div id="globalLink"> <a href="index.htm" id="gl3" class="glink" >Home</a><a href="Package.htm" id="gl3" class="glink" >Package</a><a href="Features.htm" id="gl3" class="glink" >Features</a><a href="Forthcoming modules.htm" id="gl3" class="glink" >Forthcoming mod.</a><a href="Add Hardware.htm" id="gl3" class="glink" >Additional Hardware </a><a href="Similar Tools.htm" id="gl3" class="glink" >Similar Tools </a><a href="Registration.htm" id="gl3" class="glink" >Registration</a><a href="Disclaimer.htm" id="gl3" class="glink" >Disclaimer</a><a href="News.htm" id="gl3" class="glink">News</a></div>
+    
+	<!-- Fine Barra principale menù -->
+	
+	<!--end globalLinks-->
+  </div>
+  
+  
+  <!-- end globalNav -->
+  
+</div>
+<!-- end masthead -->
+
+
+
+<div id="pagecell1">
+  <!--pagecell1-->
+  
+  <div id="breadCrumb"></div>
+  <div class="Stile1" id="pageName">
+    <h2 class="Stile1 Stile2">Kirkeby's Inverse Filter  v. 4.0</h2>
+  </div>
+  <div id="testorosso">
+    <div class="feature">
+      <p align="justify">This module computes an  inverse filter according to the Nelson/Kirkeby frequency-domain regularization.  If applied to a stereo or 2x2 impulse response, it also automatically computes  the cross-talk cancelling filters for binaural reproduction over a pair of  loudspeakers, optionally placed in the <a href="http://www.isvr.soton.ac.uk/FDAG/vap/html/sd.html">Stereo Dipole</a> configuration.<br />
+        More info about this  technique are on the <a href="http://www.isvr.soton.ac.uk/FDAG/vap/">ISVR pages</a>, and on <a href="http://pcfarina.eng.unipr.it/aurora/crostalk.html">this Aurora page</a>.<br />
+      Here a quick example is  shown. First of all, we load a set of 4 impulse responses measured with  binaural microphones in front of a loudspeaker pair, and stored in the 2x2  format:</p>
+      <table width="71%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="686" height="686" src="immagini/Copia di index_clip_image001.jpg" /></td>
+        </tr>
+      </table>
+      <p><br />
+      </p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p><br />
+      Now we invoke the Kirkeby4  module, which has the following graphical interface:</p>
+      <table width="53%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="510" height="530" src="immagini/Copia di index_clip_image002.jpg" /></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        The choice of the  parameters can be tricky: in this case, we did choose a filter lenght of 2048  samples, because it is more than twice the lenght of the original anecoic  segment of the head-related transfer function which we want to invert.<br />
+        The values of in-band and  out-band regularization parameters has to be done by trial-and-error: the  larger these values, the shorter will be the inverse filters computed.<br />
+        The frequency range inside  which &quot;accurate&quot; inversion is done has to be chosen according to the  frequency limits of the tramsducers employed (usually the loudspeakers are the  limiting components of the whole system, particularly at low frequency).<br />
+        Finally, for applications  where very accurate inversion is not required, it is possible to apply some  frequency response smoothing prior of the inversion: this generally produces  shorter filters with better dynamic range, at the expense of some residula  &quot;ripple&quot; in the freqiuency response.<br />
+      The computation of the  inverse filters is instantaneous, and this is the result:</p>
+      <table width="80%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="776" height="460" src="immagini/Copia di index_clip_image003.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+      The inverse filters are now  in the Windows clipboard, form where they can be pasted to a new waveform:</p>
+      <table width="71%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="686" height="686" src="immagini/Copia di index_clip_image004.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+        We can now check how good  these cross-talk cancelling filters are, by convolving them with the original  set of measured HRTF. <br />
+      We use the <a href="Convolve with Clipboard_Ver4.htm">Convolve4</a> module for this:</p>
+      <table width="62%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="594" height="510" src="immagini/Copia di index_clip_image005.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify"><br />
+        <br />
+      And this is the result:</p>
+      <table width="71%" border="0" align="left">
+        <tr>
+          <td><img border="0" width="686" height="686" src="immagini/Copia di index_clip_image006.jpg" /></td>
+        </tr>
+      </table>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <p align="justify">&nbsp;</p>
+      <div> </div>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <!--end content -->
+  <div class="Stile3" id="siteInfo">&copy;2007 LAE </div>
+</div>
+<!--end pagecell1-->
+<br />
+
+</body>
+</html>
